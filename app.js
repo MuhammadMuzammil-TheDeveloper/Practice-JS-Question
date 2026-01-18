@@ -121,15 +121,35 @@
 // }
 
 
-
+// Question: Word Replacement in a Paragraph
+// You are given a paragraph stored in a JavaScript string. Write a program that:
+// 1.Asks the user for a word they want to replace.
+// 2.Asks the user for the new word to replace it with.
+// 3.Searches the paragraph for the word and replaces all occurrences with the new word.
+// 4.Displays the updated paragraph.
+// 5.If the word is not found, displays: "The word you are searching for is not found."
 
 var para =
-  "The New Yorker magazine doesn't allow the phrase World War II. ' They say it should be 'the Second World War.' So let's search the following sentence for the banned characters and replace them with the phrase that the New Yorker prefers.";
-
+    "The New Yorker magazine doesn't allow the phrase World War II. ' They say it should be 'the Second World War.' So let's search the following sentence for the banned characters and replace them with the phrase that the New Yorker prefers.";
 console.log(para);
-for (var i=0; i<para.length; i++){
-    if(para.slice(i, i+3) == "New"){
-        console.log("Found the word 'allow' at index: " + i);
-        
+
+var updation = prompt("Which word you choose to update?");
+var newParaWord = prompt("Enter the new word to replace it with:");
+
+for (var i = 0; i < updation.length; i++) {
+    var index = i
+}
+var found = false;
+
+for (var a = 0; a < para.length; a++) {
+console.log(index)
+    if (para.slice(a, a + index+1) == updation) {
+        console.log("Found the word 'New' at index: " + a);
+        var newpara = para.slice(0, a) + newParaWord + para.slice(a + index);
+        console.log(newpara);
+        found = true;
     }
+}
+if (!found) {
+    console.log("The word you are searching for is not found.");
 }

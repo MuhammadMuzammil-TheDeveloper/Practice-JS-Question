@@ -162,65 +162,275 @@
 // }
 
 
+/* ======================================================
+   Topic 9: String Character Methods
+   Question:
+   Given a string, find:
+   1) The index of a specific character
+   2) The character at a specific position
+   3) Access a character using bracket notation
+
+   Notes:
+   - indexOf() returns position of character
+   - charAt() returns character at index
+   - Strings are zero-indexed
+====================================================== */
 
 // var str = "Hello Wrld"
-// console.log(str.indexOf("W"))
-// console.log(str.charAt(0))
-// console.log(str[4])
+// console.log(str.indexOf("W"))   // index of W
+// console.log(str.charAt(0))      // first character
+// console.log(str[4])             // character at index 4
+
+
+
+/* ======================================================
+   Topic 10: Math Rounding Methods
+   Question:
+   Round a decimal number using:
+   1) Math.ceil()
+//   2) Math.floor()
+
+   Notes:
+   - Math.ceil() rounds UP
+   - Math.floor() rounds DOWN
+====================================================== */
 
 // var num1 = 504.1
-// var num1Round = Math.ceil(num1)
-// console.log(num1Round)
-// var num1Round = Math.floor(num1)
-// console.log(num1Round)
+// console.log(Math.ceil(num1))   // 505
+// console.log(Math.floor(num1))  // 504
 
 
 
-// range 1 to 10
+/* ======================================================
+   Topic 11: Generate Random Numbers (Specific Ranges)
+   Question:
+   Generate random numbers:
+   1) Between 1 to 10
+   2) Between 5 to 20
+   3) Between 3 to 10
 
-// var num1 = Math.floor(Math.random() * 10 + 1);
-// console.log("num1", num1);
+   Notes:
+   - Math.random() gives 0–1
+   - Formula: Math.floor(Math.random() * (max - min + 1)) + min
+====================================================== */
 
-// range 5 to 20
+// 1 to 10
+// var num1 = Math.floor(Math.random() * 10) + 1;
+// console.log(num1);
+
+// 5 to 20
 // var randomNum = Math.floor(Math.random() * (20 - 5 + 1)) + 5;
 // console.log(randomNum);
 
-// // range 3 to 10
-// var randomNum = Math.floor(Math.random() * (maxNumber - minNumber + 1)) + minNumber;
+// 3 to 10
 // var randomNum = Math.floor(Math.random() * (10 - 3 + 1)) + 3;
 // console.log(randomNum);
 
-// var randomNumber = Math.floor(Math.random() * 6) +1;
-// // console.log(randomNumber)
 
-// var userNumber = +prompt("Enter a Random Number Between 1 -6:");
+
+/* ======================================================
+   Topic 12: Dice Game Using Random Numbers
+   Question:
+   Create a dice game where:
+   - System generates a number (1–6)
+   - User guesses the number
+   - Display Win or Loss
+
+   Notes:
+   - Common interview logic question
+====================================================== */
+
+// var randomNumber = Math.floor(Math.random() * 6) + 1;
+// var userNumber = +prompt("Enter a number between 1-6");
+
 // if (userNumber === randomNumber) {
-//     console.log("You are a Winner")
+//     console.log("You are a Winner 🎉")
 // } else {
-//     console.log("You Loss")
+//     console.log("You Loss ❌")
 // }
 
 
-var num1 = "100"
-var num2 = "200"
-console.log (typeof Number(num1))
-console.log (typeof(num1))
-console.log (typeof parseInt(num2))
-console.log (typeof +num2)
+
+/* ======================================================
+   Topic 13: Type Conversion (String → Number)
+   Question:
+   Convert string values into numbers using:
+   - Number()
+//   - parseInt()
+//   - Unary + operator
+
+   Notes:
+   - parseInt removes decimals
+   - + is fastest conversion
+====================================================== */
+
+// var num1 = "100"
+// var num2 = "200"
+// console.log(typeof Number(num1))
+// console.log(typeof num1)
+// console.log(typeof parseInt(num2))
+// console.log(typeof +num2)
 
 
 
-// Pare INT
-parseInt(num2)
+/* ======================================================
+   Topic 14: parseInt vs Unary Plus
+   Question:
+   Observe how parseInt and + behave with invalid values.
 
-parseInt("200.75")   // 200
-parseInt("200abc")  // 200
-parseInt("abc200")  // NaN
+   Notes:
+   - parseInt stops at non-numeric character
+   - + returns NaN if invalid
+====================================================== */
+
+// parseInt("200.75")   // 200
+// parseInt("200abc")   // 200
+// parseInt("abc200")   // NaN
+
+// +"200.75"            // 200.75
+// +"200abc"            // NaN
+// +"abc200"            // NaN
 
 
-// +num2
 
-+num2
-+"200.75"   // 200.75
-+"200abc"   // NaN
-+"abc200"   // NaN
+/* ======================================================
+   Topic 15: Date Object Basics
+   Question:
+   Display:
+   - Current date
+   - Local date
+   - Time
+
+   Notes:
+   - Date() gives full date-time object
+====================================================== */
+
+// var now = new Date()
+// console.log(now.toDateString())
+// console.log(now.toLocaleDateString())
+// console.log(now.toTimeString())
+// console.log(now.toLocaleTimeString())
+
+
+
+/* ======================================================
+   Topic 16: Extracting Date Components
+   Question:
+   Extract:
+   - Day
+   - Month
+   - Year
+
+   Notes:
+   - getMonth() starts from 0
+====================================================== */
+
+// console.log(new Date().getDay())
+// console.log(new Date().getMonth())
+// console.log(new Date().getDate())
+// console.log(new Date().getFullYear())
+
+
+
+/* ======================================================
+   Topic 17: Time Difference Calculation
+   Question:
+   Calculate difference between two dates.
+
+   Notes:
+   - Dates are calculated in milliseconds
+====================================================== */
+
+// var now = new Date();
+// var oldDate = new Date("13 Oct 2006");
+
+// var diff = now.getTime() - oldDate.getTime();
+// var years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+// console.log(years);
+
+
+
+/* ======================================================
+   Topic 18: DOB Age Calculator
+   Question:
+   Ask user for DOB and calculate age in years.
+
+   Notes:
+   - Real-world practical use of Date
+====================================================== */
+
+// var userDOB = prompt("Enter your DOB", "1 Jan 1992");
+// var dob = new Date(userDOB);
+// var now = new Date();
+
+// var age = Math.floor((now - dob) / (1000 * 60 * 60 * 24 * 365));
+// console.log("Your age is:", age);
+
+
+
+/* ======================================================
+   Topic 19: Function Basics
+   Question:
+   Create and call a simple function.
+
+   Notes:
+   - Functions help reuse code
+====================================================== */
+
+// function foo() {
+//     console.log("Hello world");
+// }
+// foo();
+
+
+
+/* ======================================================
+   Topic 20: Function with Parameters
+   Question:
+   Pass arguments into a function and display output.
+
+   Notes:
+   - Parameters receive values
+====================================================== */
+
+// function greet(name) {
+//     console.log("Hello " + name);
+// }
+// greet("Muhammad Muzammil");
+
+
+
+/* ======================================================
+   Topic 21: Calculator Function (Decision Making)
+   Question:
+   Create a calculator using:
+   - if / else
+   - operators (+ - * /)
+
+   Notes:
+   - Very common interview question
+====================================================== */
+
+function cal(num1, num2, opt) {
+    if (opt === "+") {
+        console.log("Addition:", num1 + num2);
+    }
+    else if (opt === "-") {
+        console.log("Subtraction:", num1 - num2);
+    }
+    else if (opt === "*") {
+        console.log("Multiplication:", num1 * num2);
+    }
+    else if (opt === "/") {
+        console.log("Division:", num1 / num2);
+    }
+    else {
+        console.log("Invalid Operator");
+    }
+}
+
+var num1 = +prompt("Enter number 1");
+var opt = prompt("Enter operator");
+var num2 = +prompt("Enter number 2");
+
+cal(num1, num2, opt);

@@ -411,26 +411,30 @@
    - Very common interview question
 ====================================================== */
 
-function cal(num1, num2, opt) {
-    if (opt === "+") {
-        console.log("Addition:", num1 + num2);
-    }
-    else if (opt === "-") {
-        console.log("Subtraction:", num1 - num2);
-    }
-    else if (opt === "*") {
-        console.log("Multiplication:", num1 * num2);
-    }
-    else if (opt === "/") {
-        console.log("Division:", num1 / num2);
-    }
-    else {
-        console.log("Invalid Operator");
-    }
-}
+// function cal(num1, num2, opt) {
+//     if (opt === "+") {
+//         console.log("Addition:", num1 + num2);
+//     }
+//     else if (opt === "-") {
+//         console.log("Subtraction:", num1 - num2);
+//     }
+//     else if (opt === "*") {
+//         console.log("Multiplication:", num1 * num2);
+//     }
+//     else if (opt === "/") {
+//         console.log("Division:", num1 / num2);
+//     }
+//     else {
+//         console.log("Invalid Operator");
+//     }
+// }
 
-var num1 = +prompt("Enter number 1");
-var opt = prompt("Enter operator");
-var num2 = +prompt("Enter number 2");
+// var num1 = +prompt("Enter number 1");
+// var opt = prompt("Enter operator");
+// var num2 = +prompt("Enter number 2");
 
-cal(num1, num2, opt);
+// cal(num1, num2, opt);
+
+
+// Task 
+

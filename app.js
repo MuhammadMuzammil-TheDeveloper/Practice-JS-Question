@@ -438,3 +438,33 @@
 
 // Task 
 
+var marks = [85, 72, 66, 90, 55, 40, 35, 28, 20, 10];
+document.getElementById("btn").onclick = function () {
+   var output = "";
+   var passcount = 0;
+   var failcount = 0;
+   for (var i = 0; i < marks.length; i++) {
+      if (marks[i] >= 40) {
+         // console.log("Pass", marks[i])
+         // document.writeln("<h3> Marks:" + " " + marks[i] + " " + " Grade: Pass</h3>")
+         output += "<h3> Marks:" + " " + marks[i] + " " + " Grade: Pass</h3>"
+         passcount++
+      }
+      else {
+         // console.log("fail", marks[i])
+         // document.writeln("<h3> Marks:" + " " + marks[i] + " " + " Grade: Fail</h3>")
+         output += "<h3> Marks:" + " " + marks[i] + " " + " Grade: Fail</h3>"
+         failcount++
+      }
+   }
+   
+   output += "<hr>";
+   output += "<h4>Total Pass: " + passcount + "</h4>";
+   output += "<h4>Total Fail: " + failcount + "</h4>";
+
+   console.log("Pass:", passcount);
+   console.log("Fail:", failcount);
+   document.getElementById("result").innerHTML = output;
+}
+
+// result(marks)

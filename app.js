@@ -514,26 +514,89 @@
 // }
 // stdReport(stdRecord, stdRollNo, userNo, userName, marks, techRecord, techRollNo) 
 
-var num1 = + prompt("Enter a num1")
-var num2 = + prompt("Enter a num2")
-var opt = prompt("Enter opt")
 
-function calculation(num1, num2, opt){
-   if(opt == "+"){
-      var res= num1+num2
-      document.writeln("<h1> Addition:" + res +"</h1>" )
-   }
-   else if(opt == "-"){
-      var res= num1-num2
-      document.writeln("<h1> Subtracton:" + res +"</h1>" )
-   }
-   else if(opt == "*"){
-      var res= num1*num2
-      document.writeln("<h1> Multiplication:" + res +"</h1>" )
-   }
-   else if(opt == "+"){
-      var res= num1/num2
-      document.writeln("<h1> Divide:" + res +"</h1>" )
-   }
+
+
+// function getData() {
+//    var num1 = document.getElementById("num1").value;
+//    var num2 = document.getElementById("num2").value;
+//    var opt = document.getElementById("opt").value;
+//    console.log(num1)
+//    console.log(num2)
+//    console.log(opt)
+
+//    calculation(num1, num2, opt)
+// }
+// function calculation(num1, num2, opt) {
+//    var res;
+
+//    if (opt == "+") {
+//       res = num1 + num2;
+//    }
+//    else if (opt == "-") {
+//       res = num1 - num2;
+//    }
+//    else if (opt == "*") {
+//       res = num1 * num2;
+//    }
+//    else if (opt == "/") {
+//       res = num1 / num2;
+//    }
+//    else {
+//       res = "Invalid Operator";
+//    }
+//    document.getElementById("result").innerHTML = "Result: " + res;
+// }
+// calculation(getData())
+
+// function checkAge(){
+//    var userName = document.getElementById("userName").value;
+//    var userRollNo = document.getElementById("userRollNo").value;
+//    var userAge = document.getElementById("userAge").value;
+//    console.log(userName)
+//    console.log(userRollNo)
+//    console.log(userAge)
+//    var months = userAge * 12
+//    var days = userAge * 365
+//    console.log(months)
+//    console.log(days)
+
+// }
+
+
+function checkAge(){
+  var userName = document.getElementById("userName").value.trim();
+  var userRollNo = document.getElementById("userRollNo").value.trim();
+  var userAge = document.getElementById("userAge").value.trim();
+
+  // Input validation
+  if(!userName || !userRollNo || !userAge){
+    alert("Please fill all fields!");
+    return;
+  }
+
+  if(isNaN(userAge) || userAge <= 0){
+    alert("Invalid age! Enter a positive number.");
+    return;
+  }
+
+  userAge = Number(userAge);
+  var months = userAge * 12;
+  var days = userAge * 365;
+
+  console.log(userName);
+  console.log(userRollNo);
+  console.log(userAge);
+  console.log(months);
+  console.log(days);
+
+  var resultDiv = document.getElementById("result");
+  resultDiv.style.display = "block";
+  resultDiv.innerHTML = `
+    <strong>${userName} (Roll No: ${userRollNo})</strong><br>
+    You are <strong>${userAge} years</strong> old.<br>
+    That is equal to:<br>
+    <strong>${months} months</strong><br>
+    <strong>${days} days</strong>
+  `;
 }
-calculation(num1,num2,opt)

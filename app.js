@@ -438,33 +438,102 @@
 
 // Task 
 
-var marks = [85, 72, 66, 90, 55, 40, 35, 28, 20, 10];
-document.getElementById("btn").onclick = function () {
-   var output = "";
-   var passcount = 0;
-   var failcount = 0;
-   for (var i = 0; i < marks.length; i++) {
-      if (marks[i] >= 40) {
-         // console.log("Pass", marks[i])
-         // document.writeln("<h3> Marks:" + " " + marks[i] + " " + " Grade: Pass</h3>")
-         output += "<h3> Marks:" + " " + marks[i] + " " + " Grade: Pass</h3>"
-         passcount++
-      }
-      else {
-         // console.log("fail", marks[i])
-         // document.writeln("<h3> Marks:" + " " + marks[i] + " " + " Grade: Fail</h3>")
-         output += "<h3> Marks:" + " " + marks[i] + " " + " Grade: Fail</h3>"
-         failcount++
-      }
-   }
-   
-   output += "<hr>";
-   output += "<h4>Total Pass: " + passcount + "</h4>";
-   output += "<h4>Total Fail: " + failcount + "</h4>";
+// var marks = [29, 1, 1, 85, 72, 66, 90, 55, 40, 35, 28, 20, 10];
+// document.getElementById("btn").onclick = function () {
+//    var output = "";
+//    var passcount = 0;
+//    var failcount = 0;
+//    for (var i = 0; i < marks.length; i++) {
+//       if (marks[i] >= 40) {
+//          // console.log("Pass", marks[i])
+//          // document.writeln("<h3> Marks:" + " " + marks[i] + " " + " Grade: Pass</h3>")
+//          output += "<h3> Marks:" + " " + marks[i] + " " + " Grade: Pass</h3>"
+//          passcount++
+//       }
+//       else {
+//          // console.log("fail", marks[i])
+//          // document.writeln("<h3> Marks:" + " " + marks[i] + " " + " Grade: Fail</h3>")
+//          output += "<h3> Marks:" + " " + marks[i] + " " + " Grade: Fail</h3>"
+//          failcount++
+//       }
+//    }
 
-   console.log("Pass:", passcount);
-   console.log("Fail:", failcount);
-   document.getElementById("result").innerHTML = output;
-}
+//    output += "<hr>";
+//    output += "<h4>Total Pass: " + passcount + "</h4>";
+//    output += "<h4>Total Fail: " + failcount + "</h4>";
+
+//    console.log("Pass:", passcount);
+//    console.log("Fail:", failcount);
+//    document.getElementById("result").innerHTML = output;
+// }
 
 // result(marks)
+
+// enter name and roll no  
+// student exits so soiw thier result with name roll no total number and grade
+// teacher enter the roll no so show all student record with roll no
+
+// var stdRecord = ['Muhammad-Muzammil', 'Ali', 'Ahmed', 'Hadi']
+// var techRecord = ['Jaffar Aman', 'Hammad']
+// var stdRollNo = [1001, 1002, 1003, 1004]
+// var techRollNo = [101, 1002]
+// var marks = [85, 72, 66, 90, 55, 40, 35, 28, 20, 10];
+
+// var userNo = prompt("Enter a roll no")
+// var userName = prompt("Enter a name")
+// var found = false;
+// function stdReport(stdRecord, stdRollNo, userNo, userName, marks, techRecord, techRollNo) {
+//    for (var i = 0; i < stdRollNo.length; i++) {
+//       if (userNo == stdRollNo[i] && userName.toLowerCase() == stdRecord[i].toLowerCase()) {
+//          console.log("Name", stdRecord[i])
+//          console.log("Roll No", stdRollNo[i])
+//          // console.log('you are in class')
+//          if (marks[i] >= 40) {
+//             // output += "<h3> Marks:" + " " + marks[i] + " " + " Grade: Pass</h3>"
+//             console.log("Pass the exam ")
+//          }
+//          else {
+//             console.log("fail the exam ")
+//          }
+//          found = true;
+//          break;
+//       }
+//       else if (userNo == techRollNo[i] && userName.toLowerCase() == techRecord[i].toLowerCase()) {
+//          for (var a = 0; a < stdRecord.length; a++) {
+//             console.log(stdRecord[a])
+//             console.log(stdRollNo[a])
+//             console.log(marks[a])
+//             found = true;
+
+//          }
+//       }
+//    }
+//    if (!found) {
+//       console.log("Your are not in CLass")
+//    }
+// }
+// stdReport(stdRecord, stdRollNo, userNo, userName, marks, techRecord, techRollNo) 
+
+var num1 = + prompt("Enter a num1")
+var num2 = + prompt("Enter a num2")
+var opt = prompt("Enter opt")
+
+function calculation(num1, num2, opt){
+   if(opt == "+"){
+      var res= num1+num2
+      document.writeln("<h1> Addition:" + res +"</h1>" )
+   }
+   else if(opt == "-"){
+      var res= num1-num2
+      document.writeln("<h1> Subtracton:" + res +"</h1>" )
+   }
+   else if(opt == "*"){
+      var res= num1*num2
+      document.writeln("<h1> Multiplication:" + res +"</h1>" )
+   }
+   else if(opt == "+"){
+      var res= num1/num2
+      document.writeln("<h1> Divide:" + res +"</h1>" )
+   }
+}
+calculation(num1,num2,opt)

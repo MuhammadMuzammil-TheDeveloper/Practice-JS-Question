@@ -6,11 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Practice Questions with Solutions | Functions</title>
 </head>
-<body>  
 
-    <h1 id="heading1">hello wordl</h1>
-    <button onclick="getvalue()">Get Value</button>
-    <button onclick="setValue()">Set Value</button>
+<body>
+    <!-- 
+      <input id="userName" type="text" placeholder="Enter your name" />
+    <button onclick="getValue()">get value</button>
+    <button onclick="setValue()" >Set value</button> -->
+
+    <!-- <h1 id="heading1">hello</h1>
+    <button onclick="setValue()">SET VALUE</button> -->
+
+    <!-- <img id="setImage" src="data:image/jpeg;base64,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" alt="">
+        <button onclick="setIma()">Set Image</button> -->
+
+    <!-- calculator -->
+    <div>
+        <input disabled id="input" type="text" placeholder="ENter a number">
+        <table border="1">
+            <tr>
+                <td onclick="clearInput()">AC</td>
+                <td onclick="delOne()">DEL</td>
+                <td onclick="addValue('%')">%</td>
+                <td onclick="addValue('/')">/</td>
+            </tr>
+            <tr>
+                <td onclick="addValue(7)">7</td>
+                <td onclick="addValue(8)">8</td>
+                <td onclick="addValue(9)">9</td>
+                <td onclick="addValue('*')">*</td>
+            </tr>
+
+            <tr>
+                <td onclick="addValue(4)">4</td>
+                <td onclick="addValue(5)">5</td>
+                <td onclick="addValue(6)">6</td>
+                <td onclick="addValue('-')">-</td>
+            </tr>
+
+            <tr>
+                <td onclick="addValue(1)">1</td>
+                <td onclick="addValue(2)">2</td>
+                <td onclick="addValue(3)">3</td>
+                <td onclick="addValue('+')">+</td>
+            </tr>
+            <tr>
+                <td onclick="addValue(0)" colspan="2">0</td>
+                <td onclick="addValue('.')">.</td>
+                <td onclick="calc()">=</td>
+            </tr>
+        </table>
+    </div>
 </body>
 <script src="./app.js"></script>
+
 </html>

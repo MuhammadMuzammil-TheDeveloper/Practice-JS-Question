@@ -1,4 +1,8 @@
-// Q1: Check even or odd
+/*
+Q1: Check whether a number is even or odd.
+Q2: Check whether a number is positive, negative, or zero.
+*/
+
 let number = 7;
 
 if (number % 2 === 0) {
@@ -7,7 +11,6 @@ if (number % 2 === 0) {
   console.log("Odd");
 }
 
-// Q2: Check positive, negative or zero
 let value = -5;
 
 if (value > 0) console.log("Positive");

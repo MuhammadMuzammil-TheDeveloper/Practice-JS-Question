@@ -1,15 +1,16 @@
-// Q1: Check even or odd
-let number = 7;
+/*
+Q1: Print numbers from 1 to 10 using a loop.
+Q2: Find numbers greater than 50 from an array.
+*/
 
-if (number % 2 === 0) {
-    console.log("Even");
-} else {
-    console.log("Odd");
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
 }
 
-// Q2: Check positive, negative or zero
-let value = -5;
+let arr = [10, 55, 23, 78, 30];
 
-if (value > 0) console.log("Positive");
-else if (value < 0) console.log("Negative");
-else console.log("Zero");
+for (let num of arr) {
+  if (num > 50) {
+    console.log("Greater than 50:", num);
+  }
+}

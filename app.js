@@ -593,10 +593,10 @@
    // var resultDiv = document.getElementById("result");
    // resultDiv.style.display = "block";
    // resultDiv.innerHTML = `
-   // //    <strong>${userName} (Roll No: ${userRollNo})</strong><br>
-   // //    You are <strong>${userAge} years</strong> old.<br>
-   // //    That is equal to:<br>
-   // //    <strong>${months} months</strong><br>
-   // //    <strong>${days} days</strong>
-   // // `;
-   // // }`
+// //    <strong>${userName} (Roll No: ${userRollNo})</strong><br>
+// //    You are <strong>${userAge} years</strong> old.<br>
+// //    That is equal to:<br>
+// //    <strong>${months} months</strong><br>
+// //    <strong>${days} days</strong>
+// // `;
+// // }`
